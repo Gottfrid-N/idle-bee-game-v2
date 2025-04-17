@@ -1,21 +1,22 @@
 [gd_scene load_steps=3 format=3 uid="uid://vacg3dqbsmpx"]
 
-[ext_resource type="Script" uid="uid://dm82agxcmehw5" path="res://main.gd" id="1_0xm2m"]
-[ext_resource type="Script" uid="uid://cx8xn3kcldrvm" path="res://tab_controller.gd" id="2_h2yge"]
+[ext_resource type="Script" uid="uid://dm82agxcmehw5" path="res://scripts/main.gd" id="1_sugp2"]
+[ext_resource type="Script" uid="uid://cx8xn3kcldrvm" path="res://scripts/tab_controller.gd" id="2_jyhfs"]
 
 [node name="Main" type="Node2D"]
-script = ExtResource("1_0xm2m")
+script = ExtResource("1_sugp2")
 
 [node name="TabController" type="Node2D" parent="."]
-script = ExtResource("2_h2yge")
+script = ExtResource("2_jyhfs")
 
 [node name="Buttons" type="VBoxContainer" parent="TabController"]
 offset_right = 192.0
 offset_bottom = 648.0
 
-[node name="Tab1" type="Button" parent="TabController/Buttons"]
+[node name="Plots" type="Button" parent="TabController/Buttons"]
 layout_mode = 2
-text = "Tab 1"
+text = "Plots
+"
 
 [node name="Tab2" type="Button" parent="TabController/Buttons"]
 layout_mode = 2
@@ -23,16 +24,17 @@ text = "Tab 2"
 
 [node name="Tabs" type="Node2D" parent="TabController"]
 
-[node name="Tab1" type="Node2D" parent="TabController/Tabs"]
+[node name="Plots" type="Node2D" parent="TabController/Tabs"]
 
-[node name="Label" type="Label" parent="TabController/Tabs/Tab1"]
-offset_left = 336.0
-offset_top = 40.0
-offset_right = 376.0
-offset_bottom = 63.0
-text = "tab 1 "
+[node name="PlotLabel" type="Label" parent="TabController/Tabs/Plots"]
+offset_left = 232.0
+offset_top = 64.0
+offset_right = 600.0
+offset_bottom = 352.0
+text = "unloaded :/"
 
 [node name="Tab2" type="Node2D" parent="TabController/Tabs"]
+visible = false
 
 [node name="Label" type="Label" parent="TabController/Tabs/Tab2"]
 offset_left = 336.0

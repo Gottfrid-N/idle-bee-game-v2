@@ -13,7 +13,7 @@ config_version=5
 config/name="Idle bee game v2"
 run/main_scene="uid://vacg3dqbsmpx"
 config/features=PackedStringArray("4.4", "Forward Plus")
-config/icon="res://icon.svg"
+config/icon="res://resources/textures/icon.svg"
 
 [editor]
 
